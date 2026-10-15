@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plax Co. | Premium Custom Bronze & Metal Plaques in Guyana</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Outfit:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        plax: {
+                            gold: '#c5a059',
+                            'gold-hover': '#b0883e',
+                            'gold-light': '#dfc593',
+                            dark: '#141312',
+                            'dark-gray': '#1c1b19',
+                            light: '#faf9f5',
+                            stone: '#eae5d8',
+                            text: '#22201d'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                        logo: ['Cinzel', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #faf9f5;
+            color: #22201d;
+        }
+        h1, h2, h3, h4, h5, h6, .font-heading {
+            font-family: 'Outfit', sans-serif;
+        }
+        
+        /* Subtle elegance pattern for dark hero background */
+        .hero-pattern {
+            background-color: #141312;
+            background-image: radial-gradient(#c5a059 0.4px, transparent 0.4px), radial-gradient(#c5a059 0.4px, #141312 0.4px);
+            background-size: 24px 24px;
+            background-position: 0 0, 12px 12px;
+        }
+    </style>
+</head>
+<body class="antialiased flex flex-col min-h-screen">
+
+    <!-- Header -->
+    <header class="fixed w-full top-0 z-50 bg-plax-dark/95 backdrop-blur-md shadow-lg transition-all duration-300 border-b border-plax-gold/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-3 cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <img src="plaxcologo.png" alt="Plax Co. Bronze Plaques & More Logo" class="h-10 md:h-12 w-auto object-contain">
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#solutions" class="text-gray-300 hover:text-plax-gold font-medium transition-colors">Who We Serve</a>
+                    <a href="#services" class="text-gray-300 hover:text-plax-gold font-medium transition-colors">Offerings</a>
+                    <a href="#guarantee" class="text-gray-300 hover:text-plax-gold font-medium transition-colors">Shipping & Guarantee</a>
+                    <a href="#gallery" class="text-gray-300 hover:text-plax-gold font-medium transition-colors">Gallery</a>
+                </nav>
+
+                <!-- CTA Button -->
+                <div class="hidden md:flex items-center gap-4">
+                    <a href="#contact" class="bg-gradient-to-r from-plax-gold to-plax-gold-light hover:from-plax-gold-hover hover:to-plax-gold text-plax-dark px-6 py-2.5 rounded-full font-bold transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+                        Get Free Digital Proof
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-plax-gold focus:outline-none">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-plax-dark border-t border-plax-gold/10">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#solutions" class="block px-3 py-3 rounded-md text-base font-medium text-gray-300 hover:text-plax-gold hover:bg-plax-dark-gray">Who We Serve</a>
+                <a href="#services" class="block px-3 py-3 rounded-md text-base font-medium text-gray-300 hover:text-plax-gold hover:bg-plax-dark-gray">Offerings</a>
+                <a href="#guarantee" class="block px-3 py-3 rounded-md text-base font-medium text-gray-300 hover:text-plax-gold hover:bg-plax-dark-gray">Shipping & Guarantee</a>
+                <a href="#gallery" class="block px-3 py-3 rounded-md text-base font-medium text-gray-300 hover:text-plax-gold hover:bg-plax-dark-gray">Gallery</a>
+                <a href="#contact" class="block w-full text-center mt-4 bg-gradient-to-r from-plax-gold to-plax-gold-light text-plax-dark px-3 py-3 rounded-md text-base font-bold hover:from-plax-gold-hover hover:to-plax-gold">Get Free Digital Proof</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow pt-20">
+        <!-- Hero Section -->
+        <section class="relative pt-16 pb-20 lg:pt-28 lg:pb-32 overflow-hidden hero-pattern">
+            <div class="absolute inset-0 bg-black/45 z-0"></div>
+            
+            <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-plax-gold/15 text-plax-gold-light font-semibold text-sm mb-6 border border-plax-gold/30 backdrop-blur-sm">
+                    <svg class="w-4 h-4 text-plax-gold" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    Now Serving Georgetown & Across Guyana
+                </div>
+                
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold font-heading text-white leading-tight tracking-tight mb-6">
+                    Premium US-Crafted <br class="hidden md:block"/> 
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-plax-gold via-plax-gold-light to-plax-gold font-logo tracking-wider">Bronze & Metal Plaques</span>
+                </h1>
+                
+                <p class="mt-4 max-w-3xl mx-auto text-xl text-gray-300 mb-10 leading-relaxed">
+                    Built to withstand the tropical sun, heavy rain, and coastal air forever. Plax Co. custom-designs and imports architectural-grade cast bronze and aluminum plaques from the USA directly to Guyana for new buildings, landmarks, and family memorials.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row justify-center gap-4 mb-12">
+                    <a href="#contact" class="bg-gradient-to-r from-plax-gold to-plax-gold-light hover:from-plax-gold-hover hover:to-plax-gold text-plax-dark px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center gap-2">
+                        Get a Free Digital Mockup
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </a>
+                    <a href="#solutions" class="bg-white/10 hover:bg-white/20 text-white border border-white/20 px-8 py-4 rounded-xl font-semibold text-lg backdrop-blur-sm transition-all shadow-sm hover:shadow flex items-center justify-center">
+                        Explore Commercial & Memorials
+                    </a>
+                </div>
+
+                <!-- Trust Pills -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-4xl mx-auto pt-8 border-t border-white/10 text-left">
+                    <div class="flex items-center gap-3 bg-white/5 px-4 py-3 rounded-xl border border-white/10">
+                        <div class="w-10 h-10 rounded-lg bg-plax-gold/20 flex items-center justify-center text-plax-gold flex-shrink-0">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <div>
+                            <p class="text-white font-semibold text-sm">Free Digital Proof Guarantee</p>
+                            <p class="text-gray-400 text-xs">Approve your exact 3D mockup before paying</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3 bg-white/5 px-4 py-3 rounded-xl border border-white/10">
+                        <div class="w-10 h-10 rounded-lg bg-plax-gold/20 flex items-center justify-center text-plax-gold flex-shrink-0">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <div>
+                            <p class="text-white font-semibold text-sm">Trusted Laparkan Logistics</p>
+                            <p class="text-gray-400 text-xs">Seamless US-to-Guyana freight & clearance</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3 bg-white/5 px-4 py-3 rounded-xl border border-white/10">
+                        <div class="w-10 h-10 rounded-lg bg-plax-gold/20 flex items-center justify-center text-plax-gold flex-shrink-0">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                        </div>
+                        <div>
+                            <p class="text-white font-semibold text-sm">Tropical Climate Proof</p>
+                            <p class="text-gray-400 text-xs">Never fades, cracks, or rusts in heat & rain</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEW SECTION 1: B2B & B2C Audience Split -->
+        <section id="solutions" class="py-24 bg-plax-light border-b border-plax-stone">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-sm font-bold tracking-wider text-plax-gold uppercase mb-2">Tailored Solutions for Guyana</h2>
+                    <h3 class="text-3xl md:text-5xl font-bold font-heading text-plax-dark">Built for Landmarks & Legacies</h3>
+                    <p class="mt-4 text-gray-600 text-lg">Plastic fades and cheap metal rusts within years in Guyana's sun, heavy rains, and coastal breeze. Whether you are unveiling a new commercial development or honoring a loved one, solid cast bronze endures for generations.</p>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-10">
+                    <!-- B2B Column: Commercial, Contractors & Institutions -->
+                    <div class="bg-plax-dark text-white rounded-3xl p-8 sm:p-10 shadow-xl border border-plax-gold/30 flex flex-col justify-between relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-40 h-40 bg-plax-gold/10 rounded-full blur-3xl -mr-10 -mt-10 pointer-events-none"></div>
+                        <div>
+                            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-plax-gold/20 text-plax-gold-light text-xs font-bold uppercase tracking-wider mb-6 border border-plax-gold/30">
+                                For Contractors, Businesses & Ministries
+                            </div>
+                            <h4 class="text-3xl font-bold font-heading mb-4 text-white">Commercial & Institutional Signage</h4>
+                            <p class="text-gray-300 mb-8 leading-relaxed">
+                                Completing a new project in Georgetown or across Guyana? Put the final stamp of international prestige on your building. We partner with construction contractors, architectural firms, hotels, government ministries, schools, and churches to supply authoritative cast signage.
+                            </p>
+
+                            <div class="space-y-4 mb-8">
+                                <div class="flex items-start gap-3">
+                                    <svg class="w-6 h-6 text-plax-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                                    <div>
+                                        <h5 class="font-bold text-white">Building Cornerstones & Commissioning Plaques</h5>
+                                        <p class="text-sm text-gray-400">Commemorate official opening ceremonies, ministers, architects, and project milestones in deep-relief bronze.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <svg class="w-6 h-6 text-plax-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
+                                    <div>
+                                        <h5 class="font-bold text-white">Corporate Logos, Seals & Coat of Arms</h5>
+                                        <p class="text-sm text-gray-400">Precision 3D casting of official ministries' seals, corporate emblems, and high-end hotel entrance plaques.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <svg class="w-6 h-6 text-plax-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                                    <div>
+                                        <h5 class="font-bold text-white">Donor Walls & Historical Markers</h5>
+                                        <p class="text-sm text-gray-400">Recognize key benefactors for churches, hospitals, and alumni associations with permanent metal installations.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="#contact" onclick="selectCategory('commercial')" class="w-full text-center bg-gradient-to-r from-plax-gold to-plax-gold-light hover:from-plax-gold-hover hover:to-plax-gold text-plax-dark font-bold py-4 px-6 rounded-xl transition-all shadow-md">
+                            Request a Commercial / Contractor Quote &rarr;
+                        </a>
+                    </div>
+
+                    <!-- B2C Column: Memorials, Milestones & Diaspora -->
+                    <div class="bg-white text-plax-dark rounded-3xl p-8 sm:p-10 shadow-xl border border-plax-stone flex flex-col justify-between relative overflow-hidden">
+                        <div>
+                            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-plax-gold/15 text-plax-gold-hover text-xs font-bold uppercase tracking-wider mb-6 border border-plax-gold/30">
+                                For Local Families & The Guyanese Diaspora
+                            </div>
+                            <h4 class="text-3xl font-bold font-heading mb-4 text-plax-dark">Memorials, Headstones & Family Milestones</h4>
+                            <p class="text-gray-600 mb-8 leading-relaxed">
+                                Honor your loved ones and family heritage with solid bronze that stands the test of time. Whether you are right here in Guyana or ordering from New York, Toronto, Florida, or the UK for a family plot or homestead back home, we make it effortless.
+                            </p>
+
+                            <div class="space-y-4 mb-8">
+                                <div class="flex items-start gap-3">
+                                    <svg class="w-6 h-6 text-plax-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                                    <div>
+                                        <h5 class="font-bold text-plax-dark">Headstone & Mausoleum Plaques</h5>
+                                        <p class="text-sm text-gray-600">Dignified single and companion grave markers with raised polished lettering, floral borders, and optional ceramic photo inserts.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <svg class="w-6 h-6 text-plax-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+                                    <div>
+                                        <h5 class="font-bold text-plax-dark">"In Loving Memory" Pew, Tree & Bench Plates</h5>
+                                        <p class="text-sm text-gray-600">Custom-sized plaques for church dedications, memorial gardens, and family remembrance benches.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <svg class="w-6 h-6 text-plax-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                                    <div>
+                                        <h5 class="font-bold text-plax-dark">Family Homestead & Estate Signs</h5>
+                                        <p class="text-sm text-gray-600">Celebrate a newly built home, anniversary, or family estate name with a prestigious gate or entrance plaque.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="#contact" onclick="selectCategory('memorial')" class="w-full text-center bg-plax-dark hover:bg-black text-plax-gold font-bold py-4 px-6 rounded-xl transition-all shadow-md">
+                            Design a Family or Memorial Plaque &rarr;
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Categories / What We Offer -->
+        <section id="services" class="py-24 bg-plax-dark text-white relative border-b border-plax-gold/20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="mb-16 text-center md:text-left md:flex md:justify-between md:items-end">
+                    <div>
+                        <h2 class="text-sm font-bold tracking-wider text-plax-gold uppercase mb-2">Product Specifications</h2>
+                        <h3 class="text-3xl md:text-5xl font-bold font-heading">Crafted for Permanence</h3>
+                    </div>
+                    <p class="mt-4 md:mt-0 text-gray-400 max-w-md">Every plaque is cast by master foundries in the USA using architectural-grade bronze or high-strength aluminum, complete with mounting hardware.</p>
+                </div>
+
+                <div class="grid lg:grid-cols-3 gap-8">
+                    <!-- Service 1 -->
+                    <div class="bg-plax-dark-gray/50 border border-plax-gold/20 rounded-3xl p-8 backdrop-blur-sm hover:border-plax-gold/60 transition-all duration-300 group">
+                        <div class="w-14 h-14 bg-plax-gold rounded-xl flex items-center justify-center mb-6 text-plax-dark shadow-md">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 21v-8m0 0H8m4 0h4M12 3a9 9 0 00-9 9v9h18v-9a9 9 0 00-9-9z"></path></svg>
+                        </div>
+                        <h4 class="text-2xl font-bold mb-4 font-heading group-hover:text-plax-gold transition-colors">Grave Headstones</h4>
+                        <p class="text-gray-400 mb-6 leading-relaxed">Durable, dignified bronze plaques designed to withstand tropical weather while honoring your loved ones with timeless elegance.</p>
+                        <ul class="text-sm text-gray-300 space-y-2">
+                            <li class="flex items-center gap-2"><svg class="w-4 h-4 text-plax-gold" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Custom raised lettering & borders</li>
+                            <li class="flex items-center gap-2"><svg class="w-4 h-4 text-plax-gold" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Full-color ceramic photo inserts</li>
+                            <li class="flex items-center gap-2"><svg class="w-4 h-4 text-plax-gold" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Concrete anchor bolts included</li>
+                        </ul>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="bg-plax-dark-gray/50 border border-plax-gold/20 rounded-3xl p-8 backdrop-blur-sm hover:border-plax-gold/60 transition-all duration-300 group">
+                        <div class="w-14 h-14 bg-plax-gold rounded-xl flex items-center justify-center mb-6 text-plax-dark shadow-md">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+                        </div>
+                        <h4 class="text-2xl font-bold mb-4 font-heading group-hover:text-plax-gold transition-colors">Memorial & Milestone Plates</h4>
+                        <p class="text-gray-400 mb-6 leading-relaxed">Perfect for dedicating church pews, benches, gardens, family estates, or special milestones with enduring beauty.</p>
+                        <ul class="text-sm text-gray-300 space-y-2">
+                            <li class="flex items-center gap-2"><svg class="w-4 h-4 text-plax-gold" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Lawn stake, wood, or brick mounts</li>
+                            <li class="flex items-center gap-2"><svg class="w-4 h-4 text-plax-gold" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Intricate 3D bas-relief options</li>
+                            <li class="flex items-center gap-2"><svg class="w-4 h-4 text-plax-gold" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Solid Cast Bronze or Aluminum</li>
+                        </ul>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="bg-plax-dark-gray/50 border border-plax-gold/20 rounded-3xl p-8 backdrop-blur-sm hover:border-plax-gold/60 transition-all duration-300 group">
+                        <div class="w-14 h-14 bg-plax-gold rounded-xl flex items-center justify-center mb-6 text-plax-dark shadow-md">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                        </div>
+                        <h4 class="text-2xl font-bold mb-4 font-heading group-hover:text-plax-gold transition-colors">Building Cornerstones & Signs</h4>
+                        <p class="text-gray-400 mb-6 leading-relaxed">Official, heavy-duty architectural signage for new buildings, ministries, hotels, and corporate headquarters across Guyana.</p>
+                        <ul class="text-sm text-gray-300 space-y-2">
+                            <li class="flex items-center gap-2"><svg class="w-4 h-4 text-plax-gold" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Custom seal & vector logo casting</li>
+                            <li class="flex items-center gap-2"><svg class="w-4 h-4 text-plax-gold" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Blind stud or rosette masonry mounts</li>
+                            <li class="flex items-center gap-2"><svg class="w-4 h-4 text-plax-gold" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Baked polyurethane UV clear coat</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEW SECTION 4: Zero-Friction Logistics (Laparkan) & Mockup Guarantee -->
+        <section id="guarantee" class="py-24 bg-white border-b border-plax-stone">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-sm font-bold tracking-wider text-plax-gold uppercase mb-2">Zero Import Headaches</h2>
+                    <h3 class="text-3xl md:text-4xl font-bold font-heading text-plax-dark">Risk-Free Design & Trusted Guyana Delivery</h3>
+                    <p class="mt-4 text-gray-600 text-lg">Ordering a custom-cast metal plaque from the United States shouldn't mean worrying about design mistakes or fighting through customs clearance alone. We remove every barrier.</p>
+                </div>
+
+                <!-- 2 Big Highlight Cards: Mockup Guarantee + Laparkan Freight -->
+                <div class="grid md:grid-cols-2 gap-8 mb-16">
+                    <!-- Highlight 1: Free Digital Proof -->
+                    <div class="bg-plax-light rounded-3xl p-8 sm:p-10 border-2 border-plax-gold/40 shadow-sm relative">
+                        <div class="w-14 h-14 bg-plax-gold/15 text-plax-gold rounded-2xl flex items-center justify-center mb-6 border border-plax-gold/30">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                        </div>
+                        <span class="inline-block px-3 py-1 rounded-md bg-green-100 text-green-800 font-bold text-xs uppercase tracking-wider mb-3">100% Risk-Free</span>
+                        <h4 class="text-2xl sm:text-3xl font-bold font-heading text-plax-dark mb-4">Our "Free Digital Proof Before You Pay" Guarantee</h4>
+                        <p class="text-gray-600 leading-relaxed mb-6">
+                            Because a bronze plaque is a permanent investment, you should never have to guess how it will look. Send us your wording, rough sketch, or company logo, and our design team will create a <strong>detailed digital mockup and exact price quote at zero cost</strong>.
+                        </p>
+                        <ul class="space-y-2.5 text-sm text-gray-700 font-medium">
+                            <li class="flex items-center gap-2.5"><svg class="w-5 h-5 text-plax-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> Review exact spelling, dates, dimensions, and layout</li>
+                            <li class="flex items-center gap-2.5"><svg class="w-5 h-5 text-plax-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> Request unlimited revisions until it is 100% right</li>
+                            <li class="flex items-center gap-2.5"><svg class="w-5 h-5 text-plax-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> Nothing goes to the US foundry until you sign off</li>
+                        </ul>
+                    </div>
+
+                    <!-- Highlight 2: Laparkan & Logistics -->
+                    <div class="bg-plax-light rounded-3xl p-8 sm:p-10 border border-plax-stone shadow-sm relative">
+                        <div class="w-14 h-14 bg-plax-gold/15 text-plax-gold rounded-2xl flex items-center justify-center mb-6 border border-plax-gold/30">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path></svg>
+                        </div>
+                        <span class="inline-block px-3 py-1 rounded-md bg-plax-gold/20 text-plax-dark font-bold text-xs uppercase tracking-wider mb-3">Seamless US-to-Guyana Shipping</span>
+                        <h4 class="text-2xl sm:text-3xl font-bold font-heading text-plax-dark mb-4">Shipped via Laparkan & Trusted Freight Partners</h4>
+                        <p class="text-gray-600 leading-relaxed mb-6">
+                            Wondering how a heavy cast-bronze plaque gets from the US foundry to Georgetown? We ship through established, reliable US-to-Guyana freight forwarders including <strong>Laparkan</strong>, coordinating the heavy lifting so you don't have to stress over international logistics.
+                        </p>
+                        <ul class="space-y-2.5 text-sm text-gray-700 font-medium">
+                            <li class="flex items-center gap-2.5"><svg class="w-5 h-5 text-plax-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> Crated securely for air or ocean transit via Laparkan</li>
+                            <li class="flex items-center gap-2.5"><svg class="w-5 h-5 text-plax-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> Clear documentation for smooth GRA customs clearance</li>
+                            <li class="flex items-center gap-2.5"><svg class="w-5 h-5 text-plax-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> Easy Georgetown pickup or local delivery coordination</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 4-Step Visual Progression -->
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="p-6 rounded-2xl bg-plax-light border border-plax-stone/60">
+                        <span class="text-xs font-bold uppercase tracking-wider text-plax-gold">Step 1</span>
+                        <h5 class="text-lg font-bold font-heading text-plax-dark mt-1 mb-2">Submit Your Idea</h5>
+                        <p class="text-sm text-gray-600">Choose a template below or upload a sketch/logo using our quick quote form.</p>
+                    </div>
+                    <div class="p-6 rounded-2xl bg-plax-light border border-plax-stone/60">
+                        <span class="text-xs font-bold uppercase tracking-wider text-plax-gold">Step 2</span>
+                        <h5 class="text-lg font-bold font-heading text-plax-dark mt-1 mb-2">Approve Free Proof</h5>
+                        <p class="text-sm text-gray-600">We send you a digital visual proof and transparent quote. Approve it before paying.</p>
+                    </div>
+                    <div class="p-6 rounded-2xl bg-plax-light border border-plax-stone/60">
+                        <span class="text-xs font-bold uppercase tracking-wider text-plax-gold">Step 3</span>
+                        <h5 class="text-lg font-bold font-heading text-plax-dark mt-1 mb-2">US Foundry Casting</h5>
+                        <p class="text-sm text-gray-600">Master craftsmen cast, hand-chase, and seal your solid bronze or aluminum plaque.</p>
+                    </div>
+                    <div class="p-6 rounded-2xl bg-plax-light border border-plax-stone/60">
+                        <span class="text-xs font-bold uppercase tracking-wider text-plax-gold">Step 4</span>
+                        <h5 class="text-lg font-bold font-heading text-plax-dark mt-1 mb-2">Laparkan Delivery</h5>
+                        <p class="text-sm text-gray-600">Your finished plaque is securely shipped via Laparkan to Georgetown, ready to mount.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery -->
+        <section id="gallery" class="py-24 bg-plax-light">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-sm font-bold tracking-wider text-plax-gold uppercase mb-2">Design Inspiration</h2>
+                    <h3 class="text-3xl md:text-4xl font-bold font-heading text-plax-dark">Template Gallery</h3>
+                    <p class="mt-4 text-gray-600 text-lg">Browse our popular styles below to get a sense of dimensions and layouts. Reference any of these names when requesting your free digital proof.</p>
+                </div>
+
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Item 1 -->
+                    <div class="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:border-plax-gold/40 border border-plax-stone/50 transition-all duration-300">
+                        <div class="aspect-w-4 aspect-h-3 bg-gray-200 overflow-hidden">
+                            <img src="CommonHeadstone.webp" alt="Classic Bronze Headstone" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-6">
+                            <span class="text-xs font-semibold text-plax-gold uppercase tracking-wider">B2C • Headstone</span>
+                            <h4 class="text-xl font-bold mt-1 font-heading text-plax-dark">The Classic Bronze</h4>
+                            <p class="text-gray-500 text-sm mt-2">Standard 24" x 12" casting with a leatherette or pebble background and raised polished border. Ideal for individual resting places.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 2 -->
+                    <div class="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:border-plax-gold/40 border border-plax-stone/50 transition-all duration-300">
+                        <div class="aspect-w-4 aspect-h-3 bg-gray-200 overflow-hidden">
+                            <img src="CompanionMemorial.jpg" alt="Companion Memorial" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-6">
+                            <span class="text-xs font-semibold text-plax-gold uppercase tracking-wider">B2C • Headstone</span>
+                            <h4 class="text-xl font-bold mt-1 font-heading text-plax-dark">Companion Memorial</h4>
+                            <p class="text-gray-500 text-sm mt-2">Larger 36" x 13" design meant to accommodate two names side-by-side, often featuring intertwined floral or religious motifs.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:border-plax-gold/40 border border-plax-stone/50 transition-all duration-300">
+                        <div class="aspect-w-4 aspect-h-3 bg-gray-200 overflow-hidden">
+                            <img src="LandmarkPlaque.jpg" alt="Civic Landmark Plaque" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-6">
+                            <span class="text-xs font-semibold text-plax-gold uppercase tracking-wider">B2B • Building & Ministry</span>
+                            <h4 class="text-xl font-bold mt-1 font-heading text-plax-dark">Cornerstone & Dedication</h4>
+                            <p class="text-gray-500 text-sm mt-2">Architectural casting with deep bevel borders, frequently used for building openings, ministries, and corporate landmarks.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:border-plax-gold/40 border border-plax-stone/50 transition-all duration-300">
+                        <div class="aspect-w-4 aspect-h-3 bg-gray-200 overflow-hidden">
+                            <img src="BenchPlaque.jpg" alt="Bench Dedication Plate" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-6">
+                            <span class="text-xs font-semibold text-plax-gold uppercase tracking-wider">B2C / B2B • Dedication</span>
+                            <h4 class="text-xl font-bold mt-1 font-heading text-plax-dark">Bench & Donor Plate</h4>
+                            <p class="text-gray-500 text-sm mt-2">Compact 8" x 2" to 10" x 4" plates designed to be mounted flush onto church pews, benches, or donor recognition walls.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 5 -->
+                    <div class="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:border-plax-gold/40 border border-plax-stone/50 transition-all duration-300">
+                        <div class="aspect-w-4 aspect-h-3 bg-gray-200 overflow-hidden">
+                            <img src="coatofarms.png" alt="Custom Seal & Portrait Plaque" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-6">
+                            <span class="text-xs font-semibold text-plax-gold uppercase tracking-wider">Custom • 3D Relief / Photo</span>
+                            <h4 class="text-xl font-bold mt-1 font-heading text-plax-dark">Seals, Logos & Portraits</h4>
+                            <p class="text-gray-500 text-sm mt-2">Integrate official seals, corporate emblems, or full-color ceramic photos of loved ones directly into the bronze casting.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 6 (Fully Custom) -->
+                    <div class="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:border-plax-gold/40 border border-dashed border-plax-gold/60 bg-plax-stone/30 flex flex-col justify-center items-center p-8 text-center cursor-pointer hover:bg-plax-stone/50 transition-all duration-300" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+                        <div class="w-16 h-16 rounded-full bg-white border border-plax-gold/25 shadow-sm flex items-center justify-center mb-4 text-plax-gold">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                        </div>
+                        <h4 class="text-xl font-bold font-heading text-plax-dark">Fully Custom Specification</h4>
+                        <p class="text-gray-500 text-sm mt-2">Have an architectural blueprint, custom dimensions, or unique shape? We cast to exact project requirements.</p>
+                        <span class="mt-4 text-plax-gold font-bold hover:text-plax-gold-hover transition-colors">Request Free Mockup &rarr;</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact / Quote Form -->
+        <section id="contact" class="py-24 bg-white relative">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-white rounded-3xl shadow-2xl overflow-hidden border border-plax-stone/50">
+                    <div class="grid md:grid-cols-5">
+                        
+                        <!-- Contact Info sidebar -->
+                        <div class="bg-plax-dark text-white p-10 md:col-span-2 flex flex-col justify-between border-r border-plax-gold/15">
+                            <div>
+                                <div class="inline-block px-3 py-1 rounded bg-plax-gold/20 text-plax-gold-light text-xs font-bold uppercase tracking-wider mb-3">
+                                    Free Digital Proof Included
+                                </div>
+                                <h3 class="text-3xl font-bold font-heading mb-4 text-white">Request Your Quote & Mockup</h3>
+                                <p class="text-gray-300 mb-8 opacity-90 text-sm leading-relaxed">Tell us what you envision. We will prepare a free digital proof so you can see the exact layout, along with full pricing including shipping to Guyana via Laparkan.</p>
+                                
+                                <div class="space-y-6">
+                                    <div class="flex items-start gap-4">
+                                        <svg class="w-6 h-6 text-plax-gold mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                        <div>
+                                            <h4 class="font-medium text-lg text-white">Service Area</h4>
+                                            <p class="text-gray-400 text-sm">Georgetown & All Regions of Guyana<br>(Diaspora orders welcome)</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-4">
+                                        <svg class="w-6 h-6 text-plax-gold mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                                        <div>
+                                            <h4 class="font-medium text-lg text-white">Email Us</h4>
+                                            <p class="text-gray-400 text-sm">inquiries@plaxco.gy</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-4">
+                                        <svg class="w-6 h-6 text-plax-gold mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                                        <div>
+                                            <h4 class="font-medium text-lg text-white">Phone / WhatsApp</h4>
+                                            <p class="text-gray-400 text-sm">+592 123 4567</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-10 pt-6 border-t border-white/10 text-xs text-gray-400">
+                                <p class="font-semibold text-plax-gold mb-1">Contractor or Bulk Order?</p>
+                                <p>Mention your project timeline in the description for priority commercial turnaround.</p>
+                            </div>
+                        </div>
+
+                        <!-- Form Area -->
+                        <div class="p-10 md:col-span-3 bg-white">
+                            <form id="quoteForm" class="space-y-5" name="PlaxCoQuotes" method="POST" data-netlify="true" enctype="multipart/form-data">
+                                <!-- Required hidden input for Netlify AJAX forms -->
+                                <input type="hidden" name="form-name" value="PlaxCoQuotes" />
+
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                    <div>
+                                        <label for="firstName" class="block text-sm font-medium text-gray-700 mb-1">First Name *</label>
+                                        <input type="text" id="firstName" name="firstName" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-plax-gold focus:border-plax-gold transition-all outline-none bg-plax-light focus:bg-white">
+                                    </div>
+                                    <div>
+                                        <label for="lastName" class="block text-sm font-medium text-gray-700 mb-1">Last Name *</label>
+                                        <input type="text" id="lastName" name="lastName" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-plax-gold focus:border-plax-gold transition-all outline-none bg-plax-light focus:bg-white">
+                                    </div>
+                                </div>
+
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                    <div>
+                                        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address *</label>
+                                        <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-plax-gold focus:border-plax-gold transition-all outline-none bg-plax-light focus:bg-white">
+                                    </div>
+                                    <div>
+                                        <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone / WhatsApp (+592 or +1) *</label>
+                                        <input type="tel" id="phone" name="phone" placeholder="e.g. +592 600 0000" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-plax-gold focus:border-plax-gold transition-all outline-none bg-plax-light focus:bg-white">
+                                    </div>
+                                </div>
+
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                    <div>
+                                        <label for="customerType" class="block text-sm font-medium text-gray-700 mb-1">I am ordering as a... *</label>
+                                        <select id="customerType" name="customerType" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-plax-gold focus:border-plax-gold transition-all outline-none bg-plax-light focus:bg-white">
+                                            <option value="individual_guyana">Individual / Family (In Guyana)</option>
+                                            <option value="individual_diaspora">Individual / Family (Diaspora Overseas)</option>
+                                            <option value="contractor_b2b">Contractor / Architect / Developer</option>
+                                            <option value="business_ministry">Business / Hotel / Government Ministry</option>
+                                            <option value="church_org">Church / School / Organization</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label for="plaqueType" class="block text-sm font-medium text-gray-700 mb-1">Type of Plaque Needed *</label>
+                                        <select id="plaqueType" name="plaqueType" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-plax-gold focus:border-plax-gold transition-all outline-none bg-plax-light focus:bg-white">
+                                            <option value="" disabled selected>Select an option</option>
+                                            <option value="headstone">Grave Headstone Plaque</option>
+                                            <option value="companion">Companion Headstone Plaque</option>
+                                            <option value="memorial">Memorial / Bench / Pew Plaque</option>
+                                            <option value="cornerstone">Building Cornerstone / Dedication (B2B)</option>
+                                            <option value="commercial_sign">Corporate / Hotel / Ministry Sign (B2B)</option>
+                                            <option value="house_sign">Family Homestead / Gate Plaque</option>
+                                            <option value="custom">Other / Custom Specification</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label for="description" class="block text-sm font-medium text-gray-700 mb-1">Plaque Wording, Size & Details *</label>
+                                    <p class="text-xs text-gray-500 mb-2">Tell us what you want the plaque to say, approximate size, and any template inspiration (e.g., "Classic Bronze" or "Building Cornerstone").</p>
+                                    <textarea id="description" name="description" rows="4" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-plax-gold focus:border-plax-gold transition-all outline-none bg-plax-light focus:bg-white resize-none"></textarea>
+                                </div>
+
+                                <div>
+                                    <label for="fileUpload" class="block text-sm font-medium text-gray-700 mb-1">Upload Logo, Sketch, or Inspiration Photo (Optional)</label>
+                                    <p class="text-xs text-gray-500 mb-2">Attach a PDF, JPG, or PNG of a company logo, portrait photo, rough sketch, or architectural drawing.</p>
+                                    <input type="file" id="fileUpload" name="fileUpload" accept=".pdf, image/png, image/jpeg, image/jpg" class="w-full px-3 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-plax-gold focus:border-plax-gold transition-all outline-none bg-plax-light focus:bg-white text-sm text-gray-600 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-plax-gold/10 file:text-plax-gold hover:file:bg-plax-gold/20 cursor-pointer">
+                                </div>
+
+                                <button type="submit" class="w-full bg-plax-dark hover:bg-black text-plax-gold font-bold py-4 rounded-xl transition-all shadow-md transform active:scale-95">
+                                    Request Free Digital Proof & Quote
+                                </button>
+                                
+                                <div id="formSuccess" class="hidden mt-4 p-4 bg-green-50 border border-green-200 text-green-800 rounded-lg flex items-center gap-3 text-sm">
+                                    <svg class="w-5 h-5 text-green-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                    <span>Thank you! We've received your request and will begin preparing your quote and free digital mockup.</span>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Floating WhatsApp Quick-Chat Button -->
+    <a href="https://wa.me/5921234567?text=Hi%20Plax%20Co.,%20I'm%20interested%20in%20a%20custom%20bronze%20plaque%20and%20free%20digital%20proof." target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" class="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#1ebe5d] text-white p-4 rounded-full shadow-2xl flex items-center gap-2 transition-transform transform hover:scale-105 group">
+        <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24">
+            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/>
+        </svg>
+        <span class="max-w-0 overflow-hidden whitespace-nowrap group-hover:max-w-xs transition-all duration-300 ease-in-out font-semibold text-sm pr-1">Chat on WhatsApp</span>
+    </a>
+
+    <!-- Footer -->
+    <footer class="bg-plax-dark text-white py-12 border-t border-plax-gold/15">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 items-center">
+                <div class="flex items-center justify-center md:justify-start">
+                    <img src="plaxcologo.png" alt="Plax Co. Bronze Plaques & More" class="h-10 w-auto object-contain">
+                </div>
+                
+                <div class="text-center text-gray-400 text-sm">
+                    <p>Importing Premium US-Cast Bronze & Metal Plaques to Guyana via Laparkan.</p>
+                </div>
+                
+                <div class="text-center md:text-right text-gray-500 text-sm">
+                    &copy; 2026 Plax Co. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        const mobileLinks = menu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // Pre-select form dropdowns when clicking B2B or B2C cards
+        function selectCategory(type) {
+            const customerTypeSelect = document.getElementById('customerType');
+            const plaqueTypeSelect = document.getElementById('plaqueType');
+            if (type === 'commercial') {
+                customerTypeSelect.value = 'contractor_b2b';
+                plaqueTypeSelect.value = 'cornerstone';
+            } else if (type === 'memorial') {
+                customerTypeSelect.value = 'individual_guyana';
+                plaqueTypeSelect.value = 'headstone';
+            }
+        }
+
+        // Real Netlify Form Submission (Handles File Uploads + AJAX)
+        const quoteForm = document.getElementById('quoteForm');
+        quoteForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const successMsg = document.getElementById('formSuccess');
+            const submitBtn = quoteForm.querySelector('button[type="submit"]');
+            const formData = new FormData(quoteForm);
+
+            submitBtn.innerHTML = 'Uploading & Sending...';
+            submitBtn.disabled = true;
+            submitBtn.classList.add('opacity-70');
+
+            fetch('/', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                if (response.ok) {
+                    quoteForm.reset();
+                    successMsg.classList.remove('hidden');
+                    setTimeout(() => {
+                        successMsg.classList.add('hidden');
+                    }, 7000);
+                } else {
+                    alert('There was an issue submitting your form. Please try again or message us on WhatsApp.');
+                }
+            })
+            .catch(error => {
+                alert('Network error. Please try again or reach out via WhatsApp.');
+            })
+            .finally(() => {
+                submitBtn.innerHTML = 'Request Free Digital Proof & Quote';
+                submitBtn.disabled = false;
+                submitBtn.classList.remove('opacity-70');
+            });
+        });
+    </script>
+</body>
+</html>
